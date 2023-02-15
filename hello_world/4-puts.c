@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
-*Write a C program that prints exactly "Programming is like building
+*main - a C program that prints exactly "Programming is like building
+*Return: 0 (Success)
 */
 int main(void)
 {
