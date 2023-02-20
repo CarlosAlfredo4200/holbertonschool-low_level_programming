@@ -10,10 +10,8 @@ int main(void)
 {
 char a;
 char b;
-char f;
 a = 'a';
 b = 'A';
-f = ' ';
 while (a <= 'z')
 {
 putchar(a);
@@ -24,7 +22,6 @@ while (b <= 'Z')
 putchar(b);
 b++;
 }
-putchar(f);
-putchar("\n");
+putchar('\n');
 return (0);
 }
