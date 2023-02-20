@@ -15,7 +15,6 @@ int main(void)
   srand(time(0));
   n = rand() - RAND_MAX / 2;
   num = n % 11;
-  printf("%d\n",num);
   /* your code goes there */
   if (num > 5)
     {
