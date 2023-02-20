@@ -13,7 +13,7 @@ char b;
 char f;
 a = 'a';
 b = 'A';
-  
+f = ' ';
 while (a <= 'z')
 {
 putchar(a);
