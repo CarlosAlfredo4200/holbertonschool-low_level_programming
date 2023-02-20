@@ -12,14 +12,15 @@
 int main(void)
 {
     int c;
-    int d;
+    int f;
+	
     for (c = 'a'; c <= 'z'; c++)
     {
 	putchar(c);
     }
-    for (d = 'a'; d <= 'z'; d++)
+    for (f = 'A'; d <= 'Z'; d++)
     {
-	putchar(toupper(d));
+	putchar(f);
     }
 	putchar("\n");
     return (0);
