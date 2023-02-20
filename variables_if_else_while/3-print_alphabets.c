@@ -21,5 +21,6 @@ int main(void)
     {
 	putchar(toupper(d));
     }
+	putchar("\n");
     return (0);
 }
