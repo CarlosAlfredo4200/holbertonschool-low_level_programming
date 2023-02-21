@@ -1,22 +1,18 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
-#include <ctype.h>
 /* more headers goes there */
 /* betty style doc for function main goes there */
 /**
- *main - Entry point
+ *print - alfhabet
  *
  *Return: Always 0 (success)
  */
-int main(void)
+
+void print_alphabet(void)
 {
 int c;
 for (c = 'a'; c <= 'z'; c++)
 {
-putchar(c);
+_putchar(c);
 }
-putchar('\n');
-return (0);
+_putchar('\n');
 }
