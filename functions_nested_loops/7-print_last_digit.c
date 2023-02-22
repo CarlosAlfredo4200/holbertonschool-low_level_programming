@@ -12,5 +12,5 @@ if (ultimo < 0)
 ultimo = (-1 * ultimo);
 }
 _putchar(ultimo + '0');
-return (ultimo); 
+return(ultimo); 
 }
