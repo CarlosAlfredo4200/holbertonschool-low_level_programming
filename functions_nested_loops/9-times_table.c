@@ -24,7 +24,7 @@ else
 _putchar(' ');
 }
 _putchar((siz % 10) + '0');
-if (row < 9)
+if (col < 9)
 {
 _putchar(',');
 _putchar(' ');
