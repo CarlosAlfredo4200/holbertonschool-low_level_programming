@@ -8,9 +8,9 @@ int i;
     if (n > 0)
         for (i = 0; i < n; i++)
         {
-            putchar('_');
+            _putchar('_');
         }else
         {
-             putchar('\n');
+             _putchar('\n');
         }
 }
