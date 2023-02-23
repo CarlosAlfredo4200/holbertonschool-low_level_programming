@@ -20,7 +20,6 @@ else
 printf("%d", num);
 }
 }
-printf("\n");
 }
 else
 {
@@ -34,5 +33,4 @@ printf("%d ", num);
 }
 }
 }
-printf("\n");
 }
