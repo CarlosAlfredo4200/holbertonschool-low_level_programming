@@ -1,0 +1,11 @@
+#include "main.h"
+/**
+ * more_numbers - function that checks for uppercase character
+ * Return: 0
+ */
+void print_line(int n){
+
+    _putchar('____');
+
+    return (0);
+}
