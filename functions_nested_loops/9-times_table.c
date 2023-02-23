@@ -7,12 +7,12 @@
 void times_table(void)
 {
 int col, row, siz;
-for (col = 0; row <= 9; row++)
+for (row = 0; row <= 9; row++)
 {
 _putchar('0');
 _putchar(',');
 _putchar(' ');
-for (row = 1; row <= 9; row++)
+for (col = 1; col <= 9; col++)
 {
 siz = (col * row);
 if ((siz / 10) > 0)
@@ -24,7 +24,7 @@ else
 _putchar(' ');
 }
 _putchar((siz % 10) + '0');
-if (row < 9)
+if (col < 9)
 {
 _putchar(',');
 _putchar(' ');
