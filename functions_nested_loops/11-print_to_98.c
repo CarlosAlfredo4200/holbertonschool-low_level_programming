@@ -29,7 +29,7 @@ if (num != 98)
 printf("%d, ", num);
 else
 {
-printf("%d", num);
+printf("%d ", num);
 }
 }
 }
