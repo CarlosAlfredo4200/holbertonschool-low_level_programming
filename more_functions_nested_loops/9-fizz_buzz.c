@@ -18,19 +18,19 @@ int main()
     {
         if (k % 3 == 0 && k % 5 == 0)
         {
-            printf("FizzBuzz\n");
+            printf("FizzBuzz ");
         }
         else if (k % 3 == 0)
         {
-            printf("Fizz\n");
+            printf("Fizz ");
         }
         else if (k % 5 == 0)
         {
-            printf("Buzz\n");
+            printf("Buzz ");
         }
         else
         {
-            printf("%d\n", k);
+            printf("%d\n ", k);
         }
     }
     return (0);
