@@ -1,7 +1,7 @@
 #include "main.h"
 /**
-* print_line - trailing whitespace
-*@n:n is the number of times the character _ should be printed
+* print_diagonal - a function that draws a diagonal line on the terminal.
+*@n:n is the number  
 * Return: 0
 */
 void print_diagonal(int n)
