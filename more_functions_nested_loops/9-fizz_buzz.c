@@ -10,11 +10,11 @@
  * Multiples of both 3 and 5 should print FizzBuzz.
  * Return: 0
  */
-
 int main()
 {
     int k;
-    for (k = 1; k <= 15; k++)
+     
+    for (k = 1; k <= 100; k++)
     {
         if (k % 3 == 0 && k % 5 == 0)
         {
@@ -30,7 +30,7 @@ int main()
         }
         else
         {
-            printf("%d\n ", k);
+            printf("%d ", k);
         }
     }
     return (0);
