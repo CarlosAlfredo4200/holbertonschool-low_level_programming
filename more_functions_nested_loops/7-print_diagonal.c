@@ -18,7 +18,8 @@ _putchar(32);
 _putchar(92);
 _putchar('\n');
 }
-}else
+}
+else
 {
 _putchar('\n');
 }
