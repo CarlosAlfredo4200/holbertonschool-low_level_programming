@@ -10,44 +10,28 @@
  * Multiples of both 3 and 5 should print FizzBuzz.
  * Return: 0
  */
-int main(void)
-    
+
+int main()
 {
-    
     int k;
-    for (k = 0; k <= 15; k++)
+    for (k = 1; k <= 15; k++)
     {
-	if (k % 3 == 0 && k % 5 == 0)
-	    
-	{
-	    
-	    printf("FizzBuzz\n");
-	    
-	}
-	
-	else if (k % 3 == 0)
-	    
-	{
-	    
-	    printf("Fizz\n");
-	    
-	}
-	
-	else if (k % 5 == 0)
-	    
-	{
-	    
-	    printf("Buzz\n");
-	    
-	}
-	
-	else
-	    
-	{
-	    
-	    printf("%d\n", k);
-	    
-	}
-	
-    
+        if (k % 3 == 0 && k % 5 == 0)
+        {
+            printf("FizzBuzz\n");
+        }
+        else if (k % 3 == 0)
+        {
+            printf("Fizz\n");
+        }
+        else if (k % 5 == 0)
+        {
+            printf("Buzz\n");
+        }
+        else
+        {
+            printf("%d\n", k);
+        }
+    }
+    return (0);
 }
