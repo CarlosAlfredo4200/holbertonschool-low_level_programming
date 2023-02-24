@@ -15,7 +15,7 @@ else
 for (a = 0; a < size; a++){
 for (b = size - a; b > 1; b--)
 {
-_putchar(46);
+_putchar(32);
 }
 for (c = 0; c <= a; c++)
 {
