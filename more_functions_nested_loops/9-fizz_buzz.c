@@ -28,6 +28,4 @@ int main(void)
             printf("%d ", k);
         }
     }
-   
-    return (0);
 }
