@@ -13,19 +13,25 @@ int main(void)
     {
         if (k % 3 == 0 && k % 5 == 0)
         {
-            printf("FizzBuzz ");
+            printf("FizzBuzz");
         }
         else if (k % 3 == 0)
         {
-            printf("Fizz ");
+            printf("Fizz");
         }
         else if (k % 5 == 0)
         {
-            printf("Buzz ");
+            printf("Buzz");
         }
         else
         {
-            printf("%d ", k);
+            printf("%d", k);
+        }
+        if ( k !=100)
+        {
+        printf(" ");
         }
     }
+    printf("\n");
+    return (0);
 }
