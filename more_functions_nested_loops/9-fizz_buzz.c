@@ -26,7 +26,7 @@ else
 {
 printf("%d", k);
 }
-if ( k != 100)
+if (k != 100)
 {
 printf(" ");
 }
