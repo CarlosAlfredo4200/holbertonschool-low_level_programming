@@ -21,7 +21,7 @@ int main(void)
 	    
 	{
 	    
-	    rintf("FizzBuzz\n");
+	    printf("FizzBuzz\n");
 	    
 	}
 	
