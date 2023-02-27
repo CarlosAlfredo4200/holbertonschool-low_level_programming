@@ -7,16 +7,12 @@
  */
 void print_rev(char *s)
 {
-int k, i;
-int longitud = 0;
-for (k = 0; s[k] != '\0'; k++)
-{
-longitud++;
-}
+int i;
 for (i = 0; s[i] != '\0'; i++)
+;
+for (i = i - 1; s[i] != '\0'; i--)
 {
-_putchar(s[longitud - 1]);
-longitud--;
+_putchar(s[i]);
 }
-_putchar("\n");
+_putchar('\n');
 }
