@@ -7,8 +7,14 @@
  */
 void print_rev(char *s)
 {
-int i, longitud = strlen(s);
-for (int i = 0; s[i] != '\0'; i++)
+int k;
+int longitud = 0;
+for (k = 0; cadena[k] != '\0'; k++)
+{
+longitud++;
+}
+int i;
+for (i = 0; s[i] != '\0'; i++)
 {
 _putchar(s[longitud - 1]);
 longitud--;
