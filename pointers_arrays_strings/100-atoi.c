@@ -19,5 +19,5 @@ int _atoi(char *s)
 	numero = numero * 10 + s[i] - '0';
     }
     numero *= signo;
-    return 0;
+    return (numero);
 }
