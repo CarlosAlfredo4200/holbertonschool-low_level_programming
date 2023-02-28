@@ -9,12 +9,13 @@
 void puts_half(char *str)
 {
   int k, i;
+  float size;
     int longitud = 0;
     for (k = 0; str[k] != '\0'; k++)
     {
         longitud++;
     }
-    int size = longitud / 2;
+    size = longitud / 2;
     for (i = size; str[i] != '\0'; i++)
     {
         _putchar(str[i]);
