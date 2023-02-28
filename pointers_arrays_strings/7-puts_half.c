@@ -10,7 +10,7 @@ void puts_half(char *str)
 {
 int k, i;
 int size;
-int longitud = 0;
+int longitud = 1;
 for (k = 0; str[k] != '\0'; k++)
 {
 longitud++;
