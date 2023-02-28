@@ -9,7 +9,7 @@
 void puts_half(char *str)
 {
 int k, i;
-float size;
+int size;
 int longitud = 0;
 for (k = 0; str[k] != '\0'; k++)
 {
