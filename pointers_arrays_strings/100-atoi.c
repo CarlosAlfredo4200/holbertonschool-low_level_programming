@@ -6,7 +6,7 @@
  */
 int _atoi(char *s)
 { 
-    char num_str[20];
+    char num_str;
     int i, j, k = 0;
     int numero = 0;
     int signo = 1;
