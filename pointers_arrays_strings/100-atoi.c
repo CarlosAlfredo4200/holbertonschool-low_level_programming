@@ -42,6 +42,6 @@ int _atoi(char *s)
         numero = numero * 10 +  num_str[k] - '0';
     }
     numero *= signo;
-        printf("El número es: %d\n", numero);
-    return 0;
+        
+    return (numero);
 }
