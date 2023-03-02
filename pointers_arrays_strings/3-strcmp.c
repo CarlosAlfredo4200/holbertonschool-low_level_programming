@@ -26,7 +26,7 @@ res = 13 ;
 }
 else if (countS2 < countS1)
 {
-res = 15;
+res = -13;
 }
 return (res);
 }
