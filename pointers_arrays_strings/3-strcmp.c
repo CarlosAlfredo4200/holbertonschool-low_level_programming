@@ -22,7 +22,7 @@ countS2++;
 }
 if (countS1 < countS2)
 {
-res = -15;
+res = 13 ;
 }
 else if (countS2 < countS1)
 {
