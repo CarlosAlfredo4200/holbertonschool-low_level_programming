@@ -23,5 +23,5 @@ cadena[i]-=32;
 }
 }
 }
-return 0;
+return (cadena);
 }
