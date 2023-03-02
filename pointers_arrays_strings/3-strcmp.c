@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _strcmp - a function that compares two strings
- * @dest: This is the output dest
- * @src: This is the input source
+ * @s1: This is the char
+ * @s2: This is the char
  *
  *Return: this is res
  */
@@ -22,11 +22,11 @@ countS2++;
 }
 if (countS1 < countS2)
 {
-res = 13 ;
+res =13;
 }
 else if (countS2 < countS1)
 {
-res = -13;
+res =-13;
 }
 return (res);
 }
