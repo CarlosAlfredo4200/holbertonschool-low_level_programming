@@ -18,6 +18,7 @@ cadena[i - 1] == ' ' ||
 cadena[i - 1] == '\t' ||
 cadena[i - 1] == '\n' ||
 cadena[i - 1] == ',' ||
+cadena[i - 1] == '.' ||
 cadena[i - 1] == ';' ||
 cadena[i - 1] == '!' ||
 cadena[i - 1] == '?' ||
