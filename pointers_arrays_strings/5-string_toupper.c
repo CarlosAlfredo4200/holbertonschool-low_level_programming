@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* string_toupper - Write a function that changes all lowercase 
+* string_toupper - Write a function that changes all lowercase
 * string to uppercase.
 *
 * @cadena: This is the input string
