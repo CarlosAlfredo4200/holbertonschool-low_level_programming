@@ -6,26 +6,29 @@
 *
 * Return: String capitalized
 */
-char *cap_string(char *entry)
+char *cap_string(char *cadena)
 {
-int conversion, index, count;
-char chars[] = {' ', ',', ';', '.', '!','?', '"', '(', ')', '{', '}',  '\t', '\n', '\0'};
-conversion = 32;
-for (index = 0; entry[index] != '\0'; index++)
+int i = 0;
+while (cadena[i])
 {
-if (entry[index] >= 'index' && entry[index] <= 'z')
-{
-entry[index] =  entry[index] - conversion;
+while (!(cadena[i] >= 'a' && cadena[i] <='z'))
+i++;
+if (
+cadena[i - 1] == ' ' ||
+cadena[i - 1] == '\t' ||
+cadena[i - 1] == '\n' ||
+cadena[i - 1] == ',' ||
+cadena[i - 1] == ';' ||
+cadena[i - 1] == '!' ||
+cadena[i - 1] == '?' ||
+cadena[i - 1] == '"' ||
+cadena[i - 1] == '(' ||
+cadena[i - 1] == ')' ||
+cadena[i - 1] == '{' ||
+cadena[i - 1] == '}' ||
+i == 0 )
+cadena[i] -=32;
+i++;
 }
-conversion = 0;
-for (count = 0; chars[count] != '\0'; count++)
-{
-if (chars[count] == entry[index])
-{
-conversion = 32;
-break;
-}
-}
-}
-return (entry);
+return cadena;
 }
