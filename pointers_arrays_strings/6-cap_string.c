@@ -1,27 +1,32 @@
 #include "main.h"
 /**
- * cap_string - a function that capitalizes all words of a string
- *
- * @cadena: This is the input string
- *
- * Return: capitalizes all words of a string
- */
-char *cap_string(char *cadena)
+* cap_string - Write a function that capitalizes all words of a string.
+*
+* @entry: This is the input string
+*
+* Return: String capitalized
+*/
+char *cap_string(char *entry)
 {
-int i;
-if(cadena[0] >= 97 && cadena[0] <= 122)
+int conversion, index, count;
+char chars[] = {' ', ',', ';', '.', '!',
+			 '?', '"', '(', ')', '{', '}',  '\t', '\n', '\0'};
+conversion = 32;
+for (index = 0; entry[index] != '\0'; index++)
 {
-cadena[0]-=32;
+if (entry[index] >= 'index' && entry[index] <= 'z')
+{
+entry[index] =  entry[index] - conversion;
 }
-for(i=1;cadena[i]!='\0';i++)
+conversion = 0;
+for (count = 0; chars[count] != '\0'; count++)
 {
-if(cadena[i-1]==32)
+if (chars[count] == entry[index])
 {
-if(cadena[i] >=97 && cadena[i] <= 122)
-{
-cadena[i]-=32;
+conversion = 32;
+break;
 }
 }
 }
-return (cadena);
+return (entry);
 }
