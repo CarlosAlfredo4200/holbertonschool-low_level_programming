@@ -1,0 +1,36 @@
+#include "main.h"
+#include <stdlib.h>
+/**
+ **_strdup - a function that returns a pointer to a newly allocated space
+ *@s: is number
+ *@str: is char
+ *Return: NULL if size = 0 . a pointer to the array, or NULL if it fails
+ */
+int ft_strlen(char *s)
+{
+int i;
+i = 0;
+while (*s++)
+{
+i++;
+}
+return (i);
+}
+char *_strdup(char *str)
+{
+char *newCadena;
+int i;
+if (!(newCadena = malloc(sizeof(char) * ft_strlen(str) + 1)))
+{
+return (NULL);
+}
+else
+{
+while (*str)
+{
+newCadena[i++] = *str++;
+}
+newCadena[i] = '\0';
+}
+return (newCadena);
+}
