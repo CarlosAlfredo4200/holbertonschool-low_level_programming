@@ -32,7 +32,7 @@ conct[i] = s1[i];
 for (ci = 0; s2[ci] != '\0'; ci++)
 {
 conct[i] = s2[ci];
-i++;  
+i++;
 }
 conct[i] = '\0';
 return (conct);
