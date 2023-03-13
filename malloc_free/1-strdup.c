@@ -8,17 +8,17 @@
 */
 char *_strdup(char *str)
 {
-  char *newCadena;
-  int i, r = 0;
-  if (str == NULL)
-    return (NULL);
-  i = 0;
-  while (str[i] != '\0')
-    i++;
-  newCadena = malloc(sizeof(char) * (i + 1));
-  if (newCadena == NULL)
-    return (NULL);
-  for (r = 0; str[r]; r++)
-    newCadena[r] = str[r];
-  return (newCadena);
+char *newCadena;
+int i, r = 0;
+if (str == NULL)
+return (NULL);
+i = 0;
+while (str[i] != '\0')
+i++;
+newCadena = malloc(sizeof(char) * (i + 1));
+if (newCadena == NULL)
+return (NULL);
+for (r = 0; str[r]; r++)
+newCadena[r] = str[r];
+return (newCadena);
 }
