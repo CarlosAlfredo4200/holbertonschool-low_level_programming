@@ -9,7 +9,7 @@
 void *malloc_checked(unsigned int b)
 {
 int *puntero;
-puntero = (int *)malloc(b * sizeof(unsigned int));
+puntero = malloc(b);
 if (puntero == NULL)
 {
 exit(98);
