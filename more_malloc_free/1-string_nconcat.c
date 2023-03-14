@@ -10,28 +10,28 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-  char *newCadena;
-  unsigned int i, k, size_S1 = 0, size_S2 = 0;
-  if (s1 == 0)
-    s1 = "";
-  if (s2 == 0)
-    s2 = "";
-  for (size_S1 = 0; s1[size_S1] != '\0'; size_S1++)
-    ;
-  for (size_S2 = 0; s2[size_S2] != '\0'; size_S2++)
-    ;
-  size_S2++;
-  if (n < size_S2)
-    {
-      n = size_S2;
-    }
-  newCadena = malloc(sizeof(char) * (size_S1 + n + 1));
-  if (newCadena == NULL)
-    return (0);
-  for ( i = 0; i < size_S1; i++)
-    {
-      newCadena[i] = s1[i];
-    }
+char *newCadena;
+unsigned int i, k, size_S1 = 0, size_S2 = 0;
+if (s1 == 0)
+s1 = "";
+if (s2 == 0)
+s2 = "";
+for (size_S1 = 0; s1[size_S1] != '\0'; size_S1++)
+;
+for (size_S2 = 0; s2[size_S2] != '\0'; size_S2++)
+;
+size_S2++;
+if (n < size_S2)
+{
+n = size_S2;
+}
+newCadena = malloc(sizeof(char) * (size_S1 + n + 1));
+if (newCadena == NULL)
+return (0);
+for ( i = 0; i < size_S1; i++)
+{
+newCadena[i] = s1[i];
+}
 for ( k = 0; k < (size_S1 + size_S2 - n + 1); k++)
 {
 newCadena[i] = s2[k];
