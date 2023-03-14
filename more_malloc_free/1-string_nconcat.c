@@ -28,7 +28,7 @@ n = size_S2;
 newCadena = malloc(sizeof(char) * (size_S1 + n + 1));
 if (newCadena == NULL)
 return (0);
-for ( i = 0; i < size_S1; i++)
+for (i = 0; i < size_S1; i++)
 {
 newCadena[i] = s1[i];
 }
