@@ -32,7 +32,7 @@ for (i = 0; i < size_S1; i++)
 {
 newCadena[i] = s1[i];
 }
-for(; i < (size_S1 + n); i++)
+for (; i < (size_S1 + n); i++)
 {
 newCadena[i] = s2[i - size_S1];
 }
