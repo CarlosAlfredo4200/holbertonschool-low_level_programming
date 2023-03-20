@@ -31,15 +31,15 @@ dog_t *new_dog(char *name, float age, char *owner)
   if (newDog_t == NULL)
     return (NULL);
 
-  for (j = 0; j < sizeName; j++)
-    newDog_t->name[j] = name[j];
+   for (k = 0; k < sizeName; k++)
+        newDog_t->name[k] = name[k];
 
-  newDog_t->age = age;
+    newDog_t->age = age;
 
-  newDog_t->owner = malloc(sizeOwner * sizeof(newDog_t->owner));
-  if (newDog_t == NULL)
-    return (NULL);
-  for (j = 0; j < sizeOwner; j++)
-    newDog_t->owner[j] = owner[j];
-  return (newDog_t);
+    newDog_t->owner = malloc(sizeOwner * sizeof(newDog_t->owner));
+    if (newDog_t == NULL)
+        return (NULL);
+    for (k = 0; k < sizeOwner; k++)
+        newDog_t->owner[k] = owner[k];
+    return (newDog_t);
 }
