@@ -23,7 +23,7 @@ printf("Age: %f\n", d->age);
 }
 else
 {
-printf("Age: nil\n");
+printf("Age: %f\n", d->age);
 }
 if (d->owner != NULL)
 {
