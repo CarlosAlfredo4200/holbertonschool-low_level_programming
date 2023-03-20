@@ -12,7 +12,7 @@ dog_t *new_dog(char *name, float age, char *owner){
     
     dog_t *newDog_t;
     int sizeName = 0;
-    int sizeOwner = 1;
+    int sizeOwner = 0;
     int k, i;
      
     for ( k = 0; name[sizeName] !='\0'; k++)
