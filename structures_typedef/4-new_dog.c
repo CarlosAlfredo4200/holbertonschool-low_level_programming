@@ -8,7 +8,7 @@
  * @owner: string from main, owner of pet
  * Return: p
  */
-og_t *new_dog(char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
     struct dog *newDog_t;
     int sizeName = 0;
