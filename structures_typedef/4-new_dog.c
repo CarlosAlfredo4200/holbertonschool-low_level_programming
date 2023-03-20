@@ -10,11 +10,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 
-  int sizeName = 0;
-  int sizeOwner = 0;
-  int k;
-
-  int sizeName = 0;
+    int sizeName = 0;
     int sizeOwner = 0;
     int k = 0, i = 0;
 
