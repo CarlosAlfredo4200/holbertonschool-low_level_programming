@@ -41,6 +41,8 @@ dog_t *new_dog(char *name, float age, char *owner){
     for (k = 0; k < sizeName; k++)
         newDog_t->name[k] = name[k];
 
+    
+    free(newDog_t->age);
     newDog_t->age = age;
 
     
