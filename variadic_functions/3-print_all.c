@@ -37,7 +37,8 @@ while (format && format[n])
 	break;
 	case 's':
 	cadena = va_arg(parametros, char *);
-	if (cadena == NULL)
+	
+if (cadena == NULL)
 {
 cadena = "(nil)";
 }	
