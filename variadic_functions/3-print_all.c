@@ -38,9 +38,9 @@ while (format && format[n])
 	case 's':
 	cadena = va_arg(parametros, char *);
 	if (cadena == NULL)
-    {
-    cadena = "(nil)";
-    }	
+{
+cadena = "(nil)";
+}	
 	printf("%s%s", cadena, separator);
 	break;
 	}
