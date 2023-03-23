@@ -10,7 +10,7 @@ int op_mod(int a, int b);
 
 /**
  * op_add - Returns the sum of two numbers.
- * @a: The first number.
+* @a: The first number.
  * @b: The second number.
  *
  * Return: The sum of a and b.
