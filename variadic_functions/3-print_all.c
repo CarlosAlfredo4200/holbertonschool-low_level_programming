@@ -40,8 +40,8 @@ while (format && format[n])
 if (cadena == NULL)
 {
 cadena = "(nil)";
-}	
-	printf("%s%s", cadena, separator);
+}
+printf("%s%s", cadena, separator);
 	break;
 	}
 	n++;
