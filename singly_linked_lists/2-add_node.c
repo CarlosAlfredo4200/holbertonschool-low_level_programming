@@ -13,6 +13,7 @@ list_t *newNodes = (list_t *)malloc(sizeof(list_t));
 if(!newNodes)
 return (NULL);
 newNodes->str = strdup(str);
+newNodes->len = strlen(str);
 newNodes->next = *head;
 *head = newNodes;
 return (newNodes);
