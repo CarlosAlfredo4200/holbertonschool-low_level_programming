@@ -3,10 +3,10 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * add_dnodeint_end - prints all the elements of a list_t list.
+ * add_dnodeint_end - function that adds a new node at the end
  * @head: pointer to the first element of the list.
- * @str: char.
- * Return: number of nodes.
+ * @n: int.
+ * Return: the address of the new element, or NULL if it failed
  **/
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
