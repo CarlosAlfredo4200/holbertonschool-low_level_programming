@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-* add_node - prints all the elements of a list_t list.
+* add_node_end - prints all the elements of a list_t list.
 * @head: pointer to the first element of the list.
 * @str: char.
 * Return: number of nodes.
