@@ -14,7 +14,7 @@ list_t *new_node, *current_node;
 new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
 {
-return NULL;
+return (NULL);
 }
 new_node->str = strdup(str);
 new_node->len = strlen(str);
