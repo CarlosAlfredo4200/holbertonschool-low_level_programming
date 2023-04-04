@@ -27,6 +27,7 @@ else
 {
 current_node = *head;
 while (current_node->next != NULL)
+{
 current_node = current_node->next;
 }
 current_node->next = new_node;
