@@ -3,13 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * delete_dnodeint_at_index - deletes the node at index index of a 
+ * delete_dnodeint_at_index - deletes the node at index index of a
  * @head: double pointer to the head of the list
  * @index: index of the node to be deleted
  *
  * Return: 1 if successful, -1 if failed
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index) 
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 dlistint_t *current, *temp;
 unsigned int i;
