@@ -4,16 +4,14 @@
 #include <string.h>
 /**
  * sum_dlistint - Returns the sum of all nodes in a doubly linked list
- * @h: Pointer to the head node of the list
- * @idx: int
- * @n : int
+ * @head: Pointer to the head node of the list
  * Return: The sum of all nodes in the list
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 dlistint_t *new_node, *temp;
 unsigned int i;
-if (h == NULL) 
+if (h == NULL)
 return (NULL);
 new_node = malloc(sizeof(dlistint_t));
 if (new_node == NULL)
@@ -31,12 +29,13 @@ return (new_node);
 temp = *h;
 for (i = 0; temp != NULL && i < idx; i++)
 temp = temp->next;
-if (temp == NULL && i == idx) 
+if (temp == NULL && i == idx)
 {
 free(new_node);
 return (add_dnodeint_end(h, n));
 }
 else if (temp != NULL)
+{
 new_node->prev = temp->prev;
 new_node->next = temp;
 temp->prev->next = new_node;
