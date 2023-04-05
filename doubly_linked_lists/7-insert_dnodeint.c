@@ -4,7 +4,9 @@
 #include <string.h>
 /**
  * sum_dlistint - Returns the sum of all nodes in a doubly linked list
- * @head: Pointer to the head node of the list
+ * @h: Pointer to the head node of the list
+ * @idx: index of the list
+ * @n :int
  * Return: The sum of all nodes in the list
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
