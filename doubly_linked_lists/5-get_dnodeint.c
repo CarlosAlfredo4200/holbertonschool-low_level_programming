@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * get_dnodeint_at_index - function that returns the nth node 
+ * get_dnodeint_at_index - function that returns the nth node
  * @index: int
  * Return: number of nodes.
  **/
