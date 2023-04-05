@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * sum_dlistint - Returns the sum of all nodes in a doubly linked list
+ * insert_dnodeint_at_index - Returns the sum of all nodes in a doubly linked list
  * @h: Pointer to the head node of the list
  * @idx: index of the list
  * @n :int
