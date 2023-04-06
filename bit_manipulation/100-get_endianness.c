@@ -7,7 +7,7 @@
  * Return: number of bits need to flip to get from `n to `m`
  */
 int get_endianness(void) {
-  int i = 1;
-  char *p = (char *)&i;
-  return (*p == 1);
+int i = 1;
+char *p = (char *)&i;
+return (*p == 1);
 }
