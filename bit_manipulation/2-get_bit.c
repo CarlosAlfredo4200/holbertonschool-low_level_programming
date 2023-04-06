@@ -12,5 +12,5 @@ if (index >= sizeof(unsigned long int) * 8)
 {
 return (-1);
 }
-return (n >> index) & 1;
+return ((n >> index) & 1);
 }
