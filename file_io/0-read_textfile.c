@@ -7,42 +7,21 @@
  *        0 when function fails or filename is NULL.
  */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+ssize_t read_textfile(const char *filename, size_t letters)
+{
+  char *buffer;
+  ssize_t fnNewFile;
+  ssize_t w;
+  ssize_t t;
 
-ssize_t read_textfile(const char *filename, size_t letters) {
-    if (filename == NULL) {
-        return 0;
-    }
+  fnNewFile = open(filename, O_RDONLY);
+  if (fnNewFile == -1)
+    return (0);
+  buffer = malloc(sizeof(char) * letters);
+  t = read(fnNewFile, buffer, letters);
+  w = write(STDOUT_FILENO, buffer, t);
 
-    FILE *file = fopen(filename, "r");
-    if (file == NULL) {
-        return 0;
-    }
-
-    char *buffer = (char *) malloc(letters);
-    if (buffer == NULL) {
-        fclose(file);
-        return 0;
-    }
-
-    size_t nread = fread(buffer, sizeof(char), letters, file);
-    if (nread == 0) {
-        fclose(file);
-        free(buffer);
-        return 0;
-    }
-
-    ssize_t nwritten = write(STDOUT_FILENO, buffer, nread);
-    if (nwritten == -1 || (size_t) nwritten != nread) {
-        fclose(file);
-        free(buffer);
-        return 0;
-    }
-
-    fclose(file);
-    free(buffer);
-    return nwritten;
+  free(buffer);
+  close(fnNewFile);
+  return (w);
 }
-
