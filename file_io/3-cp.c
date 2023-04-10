@@ -10,7 +10,7 @@ int main(int ac, char *av[])
 {
 	int fd_from, fd_to, num_bytes, w;
 	mode_t permissions = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
-	char buffer[SIZEBUF];
+	char buffer[BUFSIZ];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -23,7 +23,7 @@ int main(int ac, char *av[])
 	num_bytes = 1;
 	while (num_bytes)
 	{
-		num_bytes = read(fd_from, buffer, SIZEBUF);
+		num_bytes = read(fd_from, buffer, BUFSIZ);
 		if (num_bytes == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		if (num_bytes > 0)
