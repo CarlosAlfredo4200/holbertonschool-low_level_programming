@@ -11,7 +11,7 @@ unsigned long int hash = 5381;
 int c;
 while ((c = *str++) != 0)
 {
-hash = ((hash << 5)  +  hash)  +  c;
+hash = ((hash << 5) + hash )+c;
 }
 return (hash);
 }
