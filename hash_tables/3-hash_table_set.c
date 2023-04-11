@@ -20,35 +20,26 @@ hash_node_t *node;
   return node;
 }
 
+int hash_table_set(hash_table_t *ht, const char *key, const char *value) {
+    if (ht == NULL || key == NULL || strlen(key) == 0) {
+        return 0;
+    }
 
-int hash_table_set(hash_table_t *ht, const char *key, const char *value)
-{
-	unsigned long int index;
-	hash_node_t *new_node;
-  if (ht == NULL || key == NULL || strlen(key) == 0)
-  {
-    return 0;
-  }
+    unsigned long index = hash(key, ht->size);
+    hash_node_t *node = ht->buckets[index];
 
 
-  index = hash_djb2((const unsigned char *)key) % ht->size;
+    while (node != NULL) {
+        if (strcmp(node->key, key) == 0) {
+            free(node->value);
+            node->value = strdup(value);
+            return 1;
+        }
+        node = node->next;
+    }
 
-  new_node = create_hash_node(key, value);
-  if (new_node == NULL)
-  {
-    return 0;
-  }
-
-  if (ht->array[index] == NULL)
-  {
-    ht->array[index] = new_node;
-  }
-  else
-  {
- 
-    new_node->next = ht->array[index];
-    ht->array[index] = new_node;
-  }
-
-  return 1;
+    hash_node_t *new_node = create_hash_node(key, value);
+    new_node->next = ht->buckets[index];
+    ht->buckets[index] = new_node;
+    return 1;
 }
