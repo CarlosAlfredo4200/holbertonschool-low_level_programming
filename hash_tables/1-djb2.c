@@ -1,36 +1,16 @@
+#include "hash_tables.h"
+/**
+ *  * hash_djb2 - Hash function, takes a string and turns it into a hash number
+ *   * @str: the string, a constant value unrepeated in the hash table
+ *    *
+ *     * Return: The hash number
+ *      */
 unsigned long int hash_djb2(const unsigned char *str)
 {
-  unsigned long int hash;
-  int c;
-
-  hash = 5381;
-  while ((c = *str++))
-    {
-      hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
-    }
-  return (hash);
+unsigned long int hash = 5381;
+int c;
+while ((c = *str++) != 0)
+		{
+				hash = ((hash << 5) + hash) + c;
 }
-julien@ubuntu:~/Hash tables$ 
-julien@ubuntu:~/Hash tables$ cat 1-main.c 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include "hash_tables.h"
-
-		/**
-		 * main - check the code
-		 *
-		 * Return: Always EXIT_SUCCESS.
-		 */
-int main(void)
-{
-  char *s;
-
-  s = "cisfun";
-  printf("%lu\n", hash_djb2((unsigned char *)s));
-  s = "Don't forget to tweet today";
-  printf("%lu\n", hash_djb2((unsigned char *)s));
-  s = "98";
-  printf("%lu\n", hash_djb2((unsigned char *)s));
-  return (EXIT_SUCCESS);
-}
+return (hash);
