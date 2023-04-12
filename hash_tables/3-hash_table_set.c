@@ -8,6 +8,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     {
         unsigned long int index;
         hash_node_t *new_node;
+        char *key_dup;
+        char *value_dup;
+    
     if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
         return 0;
 
@@ -16,13 +19,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     if (new_node == NULL)
         return 0;
 
-    char *key_dup = strdup(key);
+    key_dup = strdup(key);
     if (key_dup == NULL) {
         free(new_node);
         return 0;
     }
 
-    char *value_dup = strdup(value);
+    value_dup = strdup(value);
     if (value_dup == NULL) {
         free(key_dup);
         free(new_node);
