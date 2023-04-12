@@ -4,53 +4,99 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+// Structure for a hash node
+typedef struct hash_node_s
+{
+    char *key;
+    char *value;
+    struct hash_node_s *next;
+} hash_node_t;
+
+// Structure for a hash table
+typedef struct hash_table_s
+{
+    unsigned long int size;
+    hash_node_t **array;
+} hash_table_t;
+
+// Hash function using djb2 algorithm
 unsigned long int hash_djb2(const unsigned char *str)
 {
-    unsigned long int hash;
+    unsigned long int hash = 5381;
     int c;
-    hash = 5381;
     while ((c = *str++))
     {
-        hash = ((hash << 5) + hash) + (c);
+        hash = ((hash << 5) + hash) + c;
     }
-    return (hash);
+    return hash;
 }
 
+// Function to create a new hash table
+hash_table_t *hash_table_create(unsigned long int size)
+{
+    hash_table_t *ht = malloc(sizeof(hash_table_t));
+    if (ht == NULL)
+    {
+        return NULL;
+    }
+
+    ht->size = size;
+    ht->array = malloc(size * sizeof(hash_node_t *));
+    if (ht->array == NULL)
+    {
+        free(ht);
+        return NULL;
+    }
+
+    for (unsigned long int i = 0; i < size; i++)
+    {
+        ht->array[i] = NULL;
+    }
+
+    return ht;
+}
+
+// Function to add an element to the hash table
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    if (ht == NULL || key == NULL || *key == '\0')
+    if (ht == NULL || key == NULL || strcmp(key, "") == 0)
     {
-        return 0; // Si la tabla hash o la clave son nulas o la clave está vacía, retornar 0 (fallo)
+        return 0; // Invalid input
     }
 
-    unsigned long int index = hash_djb2((const unsigned char *)key) % ht->size; // Calcular el índice en la tabla hash
+    unsigned long int index = hash_djb2((const unsigned char *)key) % ht->size;
 
-    hash_node_t *node = ht->array[index]; // Obtener el nodo en la posición del índice
-
-    while (node != NULL)
-    {
-        if (strcmp(node->key, key) == 0)
-        {
-            // Si la clave ya existe, actualizar el valor y retornar 1 (éxito)
-            free(node->value); // Liberar el valor anterior
-            node->value = strdup(value); // Duplicar y asignar el nuevo valor
-            return 1;
-        }
-        node = node->next; // Avanzar al siguiente nodo en caso de colisión
-    }
-
-    // Si la clave no existe, crear un nuevo nodo y agregarlo al principio de la lista
-    hash_node_t *new_node = (hash_node_t *)malloc(sizeof(hash_node_t));
+    // Create a new hash node
+    hash_node_t *new_node = malloc(sizeof(hash_node_t));
     if (new_node == NULL)
     {
-        return 0; // Si no se pudo asignar memoria, retornar 0 (fallo)
+        return 0; // Memory allocation failed
     }
 
-    new_node->key = strdup(key);     // Duplicar y asignar la clave al nuevo nodo
-    new_node->value = strdup(value); // Duplicar y asignar el valor al nuevo nodo
-    new_node->next = ht->array[index]; // El siguiente nodo es el que estaba previamente en esa posición del índice
-    ht->array[index] = new_node; // El nuevo nodo se convierte en el primer nodo en esa posición del índice
+    new_node->key = strdup(key); // Duplicate the key
+    if (new_node->key == NULL)
+    {
+        free(new_node);
+        return 0; // Memory allocation failed
+    }
 
-    return 1; // Retornar 1 (éxito)
+    new_node->value = strdup(value); // Duplicate the value
+    if (new_node->value == NULL)
+    {
+        free(new_node->key);
+        free(new_node);
+        return 0; // Memory allocation failed
+    }
+
+    // Insert the new node at the beginning of the list
+    new_node->next = ht->array[index];
+    ht->array[index] = new_node;
+
+    return 1; // Success
 }
+
+ 
