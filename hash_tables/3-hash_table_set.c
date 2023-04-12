@@ -4,7 +4,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-// Hash function using djb2 algorithm
 unsigned long int hash_djb2(const unsigned char *str)
 {
     unsigned long int hash = 5381;
@@ -16,7 +15,7 @@ unsigned long int hash_djb2(const unsigned char *str)
     return hash;
 }
 
-// Function to create a new hash table
+
 hash_table_t *hash_table_create(unsigned long int size)
 {
     hash_table_t *ht = malloc(sizeof(hash_table_t));
@@ -41,7 +40,7 @@ hash_table_t *hash_table_create(unsigned long int size)
     return ht;
 }
 
-// Function to add an element to the hash table
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
     if (ht == NULL || key == NULL || strcmp(key, "") == 0)
@@ -73,7 +72,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         return 0; // Memory allocation failed
     }
 
-    // Insert the new node at the beginning of the list
     new_node->next = ht->array[index];
     ht->array[index] = new_node;
 
