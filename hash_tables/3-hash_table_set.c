@@ -4,41 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-unsigned long int hash_djb2(const unsigned char *str)
-{
-    unsigned long int hash = 5381;
-    int c;
-    while ((c = *str++))
-    {
-        hash = ((hash << 5) + hash) + c;
-    }
-    return hash;
-}
 
 
-hash_table_t *hash_table_create(unsigned long int size)
-{
-    hash_table_t *ht = malloc(sizeof(hash_table_t));
-    if (ht == NULL)
-    {
-        return NULL;
-    }
 
-    ht->size = size;
-    ht->array = malloc(size * sizeof(hash_node_t *));
-    if (ht->array == NULL)
-    {
-        free(ht);
-        return NULL;
-    }
-
-    for (unsigned long int i = 0; i < size; i++)
-    {
-        ht->array[i] = NULL;
-    }
-
-    return ht;
-}
 
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
