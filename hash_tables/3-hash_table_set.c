@@ -8,7 +8,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
     if (ht == NULL || key == NULL || strcmp(key, "") == 0)
     {
-        return 0; // Invalid input
+        return 0;
     }
 
     unsigned long int index = hash_djb2((const unsigned char *)key) % ht->size;
