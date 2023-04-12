@@ -4,25 +4,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-// Structure for a hash node
-typedef struct hash_node_s
-{
-    char *key;
-    char *value;
-    struct hash_node_s *next;
-} hash_node_t;
-
-// Structure for a hash table
-typedef struct hash_table_s
-{
-    unsigned long int size;
-    hash_node_t **array;
-} hash_table_t;
-
 // Hash function using djb2 algorithm
 unsigned long int hash_djb2(const unsigned char *str)
 {
