@@ -17,7 +17,8 @@ return;
 for (i = 0; i < ht->size; i++) 
 {
 current = ht->array[i];
-while (current != NULL) {
+while (current != NULL)
+{
 next = current->next;
 free(current->key);
 free(current->value);
