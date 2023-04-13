@@ -13,7 +13,7 @@ free(node->value);
 free(node);
 }
 /**
- * hash_table_set
+ * hash_table_set - a function that adds an element to the hash table.
  * @ht: Hash table.
  * @key: Key to be indexed.
  * @value: Value to set in the hash table.
