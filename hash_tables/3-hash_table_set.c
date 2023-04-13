@@ -12,7 +12,6 @@ free(node->key);
 free(node->value);
 free(node);
 }
-
 /**
  * hash_table_set 
  * @ht: Hash table.
@@ -44,7 +43,7 @@ if (strcmp(current->key, key) == 0)
 new_node->next = current->next;
 ht->array[index] = new_node;
 free_node(current);
-return 1;
+return (1);
 }
 while (current->next != NULL && strcmp(current->next->key, key) != 0)
 { current = current->next;
@@ -61,5 +60,5 @@ new_node->next = ht->array[index];
 ht->array[index] = new_node;
 }
 }
-return 1;
+return (1);
 }
