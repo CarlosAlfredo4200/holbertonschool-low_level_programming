@@ -6,8 +6,7 @@
  * @low: lower bound
  */
 void print_array(int *array, size_t high, size_t low)
-{
-    size_t i;
+{size_t i;
 	if (low > high)
 		return;
 
